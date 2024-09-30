@@ -2,132 +2,324 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>NeuroLML Lab - Home</title>
+      <title>SLaB Lab - Home</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Caicai Zhang Lab">
+      <meta name="description" content="SLaB Lab">
       <meta name="author" content="">
       <!-- Le styles -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
-	<style>
-		ol {
-	display: block;
-	list-style-type: disc;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 40px;
-	background-color: white;
-	}
-	body {background-color: white;}
-	</style>
+      <style>
+         ol {
+            display: block;
+            list-style-type: disc;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding-left: 40px;
+            background-color: white;
+         }
+         body {
+            background-color: white;
+         }
+         .responsive-img {
+            width: 100%;
+            height: auto;
+            max-width: 450px; /* Increase max-width to make the images larger */
+         }
+         .img-container {
+            display: flex;
+            justify-content: center; /* Center the images in the container */
+            align-items: center;
+            gap: 0; /* Remove gap between images */
+         }
+         h4 {
+            font-size: 24px;
+            margin-top: 40px; /* Increase spacing above section headings */
+            margin-bottom: 20px; /* Increase spacing below section headings */
+            text-align: center; /* Center the heading */
+         }
+         .contact-section h4 {
+            text-align: left; /* Align the "Contact us!" heading to the left */
+         }
+         p {
+            font-size: 18px;
+            margin-bottom: 20px; /* Add spacing below paragraphs */
+            line-height: 1.6; /* Adjust line spacing within paragraphs */
+         }
+         .section {
+            margin-bottom: 40px; /* Add spacing between sections */
+            text-align: left; /* Left align text in all sections */
+            padding-left: 0; /* Ensure no padding on the left */
+         }
+         .content-with-image {
+            display: flex;
+            align-items: flex-start; /* Align content at the start */
+            gap: 3px; /* Add a small gap between text and image */
+         }
+         .text-content {
+            flex: 1;
+            padding-right: 10px; /* Reduce padding to decrease gap */
+         }
+         .image-content {
+            flex: 0 0 auto;
+            margin-left: 0px; /* Reduce margin to decrease gap */
+         }
+         .contact-section {
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+         }
+      </style>
    </head>
    <body>
       <div class="container">
-         <header class="jumbotron subhead" id="overview">
-            <p class="lead"> NeuroLML @ The Hong Kong Polytechnic University </p>
-            <h2>Neurocognition of Language, Music and Learning Lab</h2>
+         <header id="overview">
+            <img alt="" src="files/title2.png" style="display: block; margin: 0 auto;">
          </header>
+        
          <div class="masthead">
             <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="people.html">People</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="grants.html">Grants</a></li>
-			<li><a href="media.html">Media</a></li>
-                        <li><a href="contact.html">Join Experiment</a></li>
-                     </ul>
-                  </div>
-               </div>
-	    </div>
-         </div>
-
-	 <div class="row-fluid">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="people.html">Members</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="media.html">Collaboration & Outreach</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Responsive Images</title>
+             <style>
+                 .small-img {
+                     max-width: 80%;
+                     height: auto;
+                     display: block;
+                     margin: 0 auto;
+                 }
+                 
+                 .large-img {
+                     max-width: 80%;
+                     height: auto;
+                     display: block;
+                     margin: 0 auto;
+                 }
+                .text {
+                     text-align: center;
+                 }
+             </style>
+        <div class="row-fluid">
             <div class="span12">
-               <div id="main-carousel" class="carousel slide">
-                  <div class="carousel-inner">
-			  
-                     <div class="item active">
-                        <img src="files/frontpage_members.jpg" class="carousel-image" alt="" style="width:100%; height: 300px;">                      
-                        <div class="carousel-caption">
-                           <h4>Welcome to our Lab!</h4>
-                           <!-- images/microscope-crop1.JPG-->
-                           <p></p>
+               <div class="img-container">
+                 <div style="display: flex; justify-content: space-between;">
+                    <div style="flex: 1;">
+                        <img src="files/welcometoslab.png" class="small-img" alt="Slab Letter">
+                        <div class="text">
+                           <p>We are based in the <a href="https://huma.hkust.edu.hk/" target="_blank">Division of Humanities</a> at Hong Kong University of Science and Technology.
+                            <p>
                         </div>
-                     </div>
-
-		     <div class="item">
-                        <img src="files/frontpage_YF.jpg" class="carousel-image" alt="" style="width:100%; height: 300px;">
-                        <div class="carousel-caption">
-                           <h4>Dr. Zhang at the Youth Forum on Language Neuroscience, PolyU</h4>
-                           <p></p>
-                        </div>
-                     </div>
-			  
-                  </div>
-                  <a class="left carousel-control" href="#main-carousel" data-slide="prev">‹</a>
-                  <a class="right carousel-control" href="#main-carousel" data-slide="next">›</a>
+                    </div>
+                    <div style="flex: 2;">
+                        <img src="files/Photo_Homepage.jpg" class="large-img" alt="Photo Homepage">
+                    </div>
+                   </div>  
                </div>
             </div>
          </div>
-	      
-         <hr>
-         <div class="container-fluid">
-            <div class="row-fluid marketing">
-               <div class="span12">
-		  <h4>WELCOME!</h4> 
-                  <p>
-                     Led by Dr. Caicai Zhang, the NeuroLML lab broadly concentrates on how language is processed and represented in the human brain, and how it interacts with other cognitive domains such as music and memory. At a more specific level, our research focuses on:
-                  </p>
-                     <ol>
-                        <li><b>Language, music and brain.</b> We investigate this theme from the perspective of how congenital amusia (commonly known as tone deafness), an innate musical pitch disorder, affects speech processing from behavioral to neural levels.</li> 
-                        <li><b>Memory consolidation of language.</b> How sleep contributes to the consolidation of speech sound categories in the brain of L2 learners.</li>
-                        <li><b>Language in neurodevelopmental disorders.</b> What neurocognitive mechanisms underly learning and memory problems in children with developmental disorders of speech and language.</li>
-                     </ol>
-                     We use a broad range of tools, including behavioral methods, electroencephalograph (EEG), functional MRI (fMRI) and functional Near-Infrared Spectroscopy (fNIRS) to study these questions.<br><br>
-		     We are part of the <a href="https://www.polyu.edu.hk/cbs/rclcn/" target="_blank">Research Centre for Language, Cognition, and Neuroscience (RCLCN)</a> at the <a href="https://www.polyu.edu.hk/cbs/" target="_blank">Department of Chinese and Bilingual Studies (CBS)</a>, PolyU.
-			<br><br>
-		       
-                  <br><h4>JOIN US!</h4>
-				        <ol>
-                  <li><b>We are looking for passionate researchers (RA/PhD/PostDoc) to join our team. Please see <a href="https://jobs.polyu.edu.hk/job_detail.php?job=240531003">here</a> for more details. You can also email Dr. Zhang with your CV at <a href="mailto:caicai.zhang@polyu.edu.hk">caicai.zhang@polyu.edu.hk</a>.</b></li>
-                  <li><b>We are also looking for subjects (currently mainly <span style="font-weight:bold; color:#ff0000;">Cantonese-speaking children</span>) to participate in our ongoing experiments (see below self-explanatory posters and <a href="contact.html">here</a> for more details). Feel free to spread the info and contact <a href="mailto:caicai.zhang@polyu.edu.hk">caicai.zhang@polyu.edu.hk</a> for any questions.</b></li>
-				        </ol>
-		  		<img src="files/poster_240313_MOST.png" alt="HMRF" width="455" height="644" style='border:1.5px solid #000000' />
-		                <img src="files/poster_240112_HMRF.jpg" alt="MOST" width="455" height="644" style='border:1.5px solid #000000' align="right" />
-		       <hr>
-		       
-                  <h4>NEWS</h4>
-				        <ol>
-		  <li><span style="font-weight:bold; color:#3366ff;">[Invited Talk] 22 Jul 2024.</span> Dr. Zhang talked at the Institute of Psychology (Chinese Academy of Science), on "The relationship between language and music: A case study on congenital amusia". <a href="https://drcczlab.github.io/files/news_240722_talk_CZ.pdf">Abstract</a></li>				
-		  <li><span style="font-weight:bold; color:#ff0000;">[Grant] 28 Jun 2024.</span> Our lab successfully obtained several competitive external and internal grants. Please go to the "Grants" page for more details.</li>
-		  <li><span style="font-weight:bold; color:#3366ff;">[Invited Talk] 09 May 2024.</span> Dr. Zhang <a href="https://drcczlab.github.io/files/news_240509_YF2.jpg">talked</a> at the PolyU Young Scholar Forum on Language Neuroscience on "Neurocognitive bases of developmental disorders of speech, language and literacy: The role of domain-general learning systems". Check out a <a href="https://drcczlab.github.io/files/news_240509_YF1.jpg">group photo</a> from the forum here! <a href="https://events.polyu.edu.hk/cbsyfln/speeches">Abstract of all talks at the forum</a></li>
-		  <li><span style="font-weight:bold; color:#3366ff;">[Invited Talk] 4:30PM, HKT (UTC+8), 06 Mar 2024.</span> Dr. Martin PICKERING (University of Edinburgh) on "Predicting language in difficult circumstances". <a href="https://drcczlab.github.io/files/news_240306_talk_MP.pdf">Abstract</a> & <a href="https://www.polyu.edu.hk/mysurvey2/index.php/671227?lang=en">Registration Link</a></li>
-		  <li><span style="font-weight:bold; color:#ff0000;">[Publication] 04 Mar 2024.</span> The collection on "Language Processing", edited by Dr. Zhang and three other co-editors, has been published online on the <i>Scientific Reports</i> website. Feel free to <a href="https://www.nature.com/collections/ghechhcdah">check it out here</a> and share this collection! </li>				
-		  <li><span style="font-weight:bold; color:#3366ff;">[Invited Talk] 5PM, HKT (UTC+8), 21 Feb 2024.</span> Dr. Christoph SCHEEPERS (University of Glasgow) on "The “Crossword Effect” in free word recall: A retrieval advantage for words encoded in line with their spatial associations". <a href="https://drcczlab.github.io/files/news_240221_talk_CS.pdf">Abstract</a> & <a href="https://polyu.zoom.us/j/92524418249?pwd=WjZya2lTaTFhL2w4RzkzL1dRTUJ1Zz09">Zoom Link</a></li>
-		  <li><span style="font-weight:bold; color:#ff9900;">[Gathering] 05 Feb 2024.</span> Our lab <a href="https://drcczlab.github.io/files/news_240205_gather.jpg">gathered</a> to celebrate the Chinese New Year. We wish everyone a healthy, prosperous and productive Year of Dragon 🐲.</li>
-		  <li><span style="font-weight:bold; color:#3366ff;">[Invited Talk] 5PM, HKT (UTC+8), 31 Jan 2024.</span> Dr. Andriy MYACHYKOV (Northumbria University) on "Crosslinguistic Interplay and Cognitive Reserve in Bilinguals". <a href="https://drcczlab.github.io/files/news_240131_talk_AM.pdf">Abstract & Zoom Link</a></li>			
-		  <li><span style="font-weight:bold; color:#3366ff;">[Invited Talk] 5PM, HKT (UTC+8), 24 Jan 2024.</span> Dr. Jeremy STEFFMAN (University of Edinburgh) on "Processing prosody in segmental speech perception: Tests in the spectral and temporal domain". <a href="https://drcczlab.github.io/files/news_240124_talk_JS.pdf">Abstract & Zoom Link</a></li>				
-                  <li><span style="font-weight:bold; color:#3366ff;">[Invited Talk] 5PM, HKT (UTC+8), 22 Nov 2023.</span> Dr. Saloni KRISHNAN (Royal Holloway, University of London) on "Investigating motivation for language and reading". <a href="https://drcczlab.github.io/files/news_231122_talk_SK.pdf">Abstract & Zoom Link</a></li>
-                  <li><span style="font-weight:bold; color:#ff6666;">[Prize] 11 Sep 2023.</span> Dr. Zhang was awarded the Outstanding Young Researcher (Individual) award in the Faculty Awards for Outstanding Performance Achievement 2023. <a href="https://drcczlab.github.io/files/news_231111_prize_CZ.jpg">Congrats!</a></li>
-				        </ol>
-		       
+      </body>
+</html>
+<hr>
+             <div class="span10 section">
+                  <h4>News and Events</h4>
+                  <div style="max-height: 200px; overflow-y: auto; border: 0.8px solid #ccc; padding: 10px;">
+                      <ol>
+                          <li>05/08/2024 Jiayu LIANG, who graduated from Shandong University, joined our lab as RA!</li>				
+                          <li>02/08/2024 Jeremy presented our Aging project at the <a href="https://goldenage.foundation/en/gaes2024">9th Golden Age Expo and Summit (GAES)</a>.</li>
+                          <li>31/07/2024 Yuqi successfully defended her MPhil thesis titled "Cantonese Tone Processing in the Forced-attention Dichotic Listening Task by Cantonese-dominant Bilingual Speakers”.</li>
+                          <li>11/06/2024 Our study “<a href="https://pubs.asha.org/doi/10.1044/2024_JSLHR-23-00711">Distributional learning and overnight consolidation of non-native tonal contrasts by tonal language speakers</a>” is published in Journal of Speech, Language, and Hearing Research.</li>
+                          <li>06/06/2024 Our study “<a href="https://www.degruyter.com/document/doi/10.1515/lingvan-2022-0158/html">The role of coarticulatory tonal information in Cantonese spoken word recognition: an eye-tracking study</a>” is published in Linguistics Vanguard.</li>				
+                          <li>21/05/2024 Our team member Kangdi LIU was awarded the 2023-2024 Postgraduate Research Grant for the Division of Humanities.</li>
+                          <li>23/04/2024 Dr. Quentin QIN was offered an Early Career Travel Award for the 186th <a href="https://acousticalsociety.org/ottawa/">ASA Meeting in Canada</a>.</li>
+                          <li>12/04/2024 Our team member Yuqi WANG was awarded the prestigious <a href="https://cerg1.ugc.edu.hk/hkpfs/index.html">Hong Kong PhD Fellowship</a>. Congrats!</li>			
+                          <li>10/04/2024 Our new article about L2/L3 tone perception was published in <a href="https://journals.sagepub.com/doi/10.1177/02676583241244604">Second Language Research</a>.</li>
+                          <li>19/03/2024 An interview featuring our sleep and language learning research was published in <a href="https://dw-media.tkww.hk/epaper/wwp/20240319/a07-0319.pdf">Hong Kong Wen Wei Po</a>.</li>
+                          <li>01/03/2024 Three studies led by students were accepted to the <a href="https://acousticalsociety.org/ottawa/">ASA (Ottawa)</a> and the <a href="https://www.polyu.edu.hk/en/fh/isls/">ASA (HK)</a> meetings.</li>
+                          <li>18/11/2023 Keep an eye on our team's work presented at <a href="https://tai2023.sg/">TAI 2023 in Singapore</a> and <a href="https://ling.cuhk.edu.hk/amlap.asia/">AMLap Asia 2023 in Hong Kong</a>.</li>
+                          <li>03/10/2023 Our team member Yuqi WANG received Dr. Charles Chan Postgraduate Scholarship 2023/24 for her academic achievement.</li>
+                          <li>01/09/2023 Welcome to our new member Kangdi LIU (RPG) and Susu LAI (RA)! And farewell to our team alum Ruofan.</li>
+                          <li>07/08/2023 Our research team have two papers (ID: 157 and 499) presented at the <a href="https://www.icphs2023.org/">ICPhS 2023 in Prague</a>. Please stop by!</li>
+                          <li>01/07/2023 Our project about tone learning and memory will be funded by <a href="https://www.ugc.edu.hk/eng/rgc/funding_opport/ecs/index.html">Early Career Scheme, Research Grants Council (Hong Kong)</a>.</li>
+                          <li>23/05/2023 <a href="https://huma.hkust.edu.hk/news/mphil-student-jeremy-yinto-chui-was-awarded-prestigious-hk-phd-fellowship">Jeremy</a> and Ruofan were awarded the prestigious Hong Kong PhD Fellowship for PhD studies. Congrats!</li>
+                          <li>09/05/2023 Yuqi's paper was accepted for oral presentation to the <a href="https://slablab.weebly.com/">FoCaL-6</a> in Hong Kong.</li>
+                          <li>24/03/2023 Our paper was accepted to the <a href="https://site.hanyang.ac.kr/web/hisphoncog">HISPhonCog</a> 2023 in Seoul, Korea.</a></li>
+                          <li>01/02/2023 We are looking for a Research Assistant/Post-doctoral Fellow. Please apply <a href="https://hrmsxprod.psft.ust.hk:8044/psp/hrmsxprod/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_CE.GBL?Page=HRS_CE_JOB_DTL&Action=A&JobOpeningId=8334&SiteId=1000&PostingSeq=1">here.</a> The deadline is 28 Feb, 2023.</li>
+                          <li>01/01/2023 Our eye-tracking project collaborating with <a href="https://fah.um.edu.mo/jingwei-zhang/">Dr. Jingwei Zhang</a> will be funded by the Multiple-Year Research Grant, Macau.</li>
+                          <li>15/10/2022 Our team member Jeremy Chui (RPG) received Dr. Charles Chan Postgraduate Scholarship 2022/23.</li>
+                          <li>01/10/2022 Our project about sleep and mental health was funded by <a href="https://ssc.hkust.edu.hk/projects/empowering-our-community-for-positive-change/staying-smart-by-taking-a-nap">Sustainable Smart Campus as a Living Lab Project.</a></li>
+                          <li>01/09/2022 Our project about ageing and language learning was funded by HKUST <a href="https://iems.ust.hk/updates/iems-updates/2022/announcing-iems-grants-2022">IEMS Research Grants.</a></li>
+                          <li>01/09/2022 Welcome to two new members Ruofan WU (RA) and Yuqi WANG (RPG)! And farewell to our team alum Rui Jin.</li>
+                      </ol>
+                  </div>
+               </div>
+
+            <div class="span10 section">
+                <h4>We are interested in...</h4>
+                
+                  <!-- Add this CSS to the <style> section of your HTML file -->
+                  <style>
+                      .responsive-img {
+                          width: auto;
+                          height: auto;
+                      }
+                      
+                      .theme-img {
+                          max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+                          height: auto; /* Maintain the aspect ratio */
+                          max-height: 300px; /* Set a maximum height to control the size */
+                          object-fit: contain; /* Ensure the image fits within the set dimensions without distortion */
+                      }
+                      
+                      .content-with-image {
+                          display: flex;
+                          align-items: center; /* Align the image and text at the center */
+                          gap: 20px; /* Space between text and image */
+                      }
+                  
+                      .text-content {
+                          flex: 2;
+                         text-align: justify;
+                      }
+                  
+                      .image-content {
+                          flex: 1;
+                      }
+                     .smaller1-img {
+                            max-width: 50%; /* 设置图片最大宽度为父元素宽度的一半，可以根据需要调整百分比 */
+                            height: auto; /* 保持图片的纵横比 */
+                      }
+                      .smaller2-img {
+                            max-width: 30%;
+                            height: auto;
+                      }
+                  </style>
+
+                  <hr>
+                  <!-- First Content Block -->
+                  <div class="content-with-image">
+                      <div class="text-content">
+                          <p><b>Second-language learning of speech prosody</b></p>
+                          <p>
+                              It is well established that the first language (L1) is claimed to be responsible for second-language learners’ (in)ability to process sounds in a new language. However, the conditions under which the L1 facilitates or inhibits the learning of new sounds have yet to be understood. Adopting phonetic and psycholinguistic approaches, our research focuses on how lexical tones (Mandarin tones: /pā/ ‘eight’ T1, /pá/ ‘to pull out’ T2, /pǎ/ ‘to hold’ T3, /pà/ ‘father’ T4) and lexical stress (English stress: DEsert vs. deSERT) are processed by adult second-language learners who speak different languages as L1.
+                          </p>
+                          <p>
+                              Mandarin-speaking Students Wanted —> 
+                              <a href="" target="_blank">Stress Training Project</a>
+                           </p>
+                      </div>
+                      <div class="image-content">
+                          <img src="files/Theme1.PNG" alt="Illustration" class="responsive-img theme-img">
+                      </div>
+                  </div>
+                  <hr>
+                  <!-- Second Content Block -->
+                  <div class="content-with-image">
+                      <div class="text-content">
+                          <p><b>Sleep-dependent consolidation of lexical tones</b></p>
+                          <p>
+                              Recent evidence shows that sleep plays a crucial role in transforming newly acquired linguistic knowledge into long-term memory. Given unique characteristics of lexical tones (e.g., high talker-variability of pitch), there is still a vast unexplored area in sleep-mediated memory consolidation of tone learning. By combining behavioral experiments and brain imaging technologies (e.g., EEG), we are dedicated to exploring the relationship between sleep and tone learning, providing memory-based insights for cross-language and cross-age learning of lexical tones.
+                          </p>
+                          <p>
+                              English Participants Wanted —> 
+                              <a href="files/Exp7_poster_UST.png" target="_blank">Nap Project</a> & <a href="files/Exp_Eng_Poster.jpg" target="_blank">Sleep Project</a>
+                          </p>
+                      </div>
+                      <div class="image-content">
+                          <img src="files/Theme2.PNG" alt="Illustration" class="responsive-img theme-img">
+                      </div>
+                  </div>
+                  <hr>
+                  <!-- Third Content Block -->
+                  <div class="content-with-image">
+                      <div class="text-content">
+                          <p><b>Aging, cognitive, and language learning</b></p>
+                          <p>
+                              Our research is concerned with the well-being of the aging population. Older adults are facing the challenges of age-related dysfunction in language learning and cognition (e.g., memory and attention). Indeed, recent projects have aimed at investigating older adults’ decline in lexical tone learning and the possible relationship with cognitive ability. We also attempt to find evidence that multilingual language experiences (including learning a new language) can mitigate cognitive decline and promote healthy aging.
+                          </p>
+                         <p>
+                              Cantonese-speaking Older Adults Wanted —> 
+                              <a href="files/Older adult poster.pdf" target="_blank">FADL Project</a>
+                         </p>
+                      </div>
+                      <div class="image-content">
+                          <img src="files/Theme3.PNG" alt="Illustration" class="responsive-img theme-img">
+                      </div>
+                  </div>
+            <hr>
+               <div class="span10 section">
+                  <style>
+                      .responsive-img {
+                          width: auto;
+                          height: auto;
+                      }
+                      
+                      .theme-img {
+                          max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+                          height: auto; /* Maintain the aspect ratio */
+                          max-height: 300px; /* Set a maximum height to control the size */
+                          object-fit: contain; /* Ensure the image fits within the set dimensions without distortion */
+                        justify-content: center;
+                      }
+                      
+                      .content-with-image {
+                          display: flex;
+                          align-items: center; /* Align the image and text at the center */
+                          gap: 20px; /* Space between text and image */
+                      }
+                  
+                      .text-content {
+                          flex: 2;
+                         text-align: justify;
+                      }
+                  
+                      .image-content {
+                          flex: 1;
+                      }
+                  </style>
+               
+                  <div class="content-with-image">
+                      <div class="text-content">
+                           <h4>Contact us!</h4>
+                              <p>
+                                 ​Email: <a href="mailto:qinlabhkust@gmail.com">qinlabhkust@gmail.com</a><br>
+                                 Location: Room G005,</a><br>
+                                 Cheng Yu Tung Building,</a><br>
+                                 The Hong Kong University of Science and Technology,</a><br>
+                                 Clear Water Bay, Kowloon, Hong Kong</a><br>
+                              </p>
+                      </div>
+                      <div class="image-content">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8513.108081198025!2d114.25819148394467!3d22.33427692497778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404046b3b9889e3%3A0x7f5b59d145fcf27f!2z6YOR6KOV5b2k5qW8!5e0!3m2!1szh-CN!2shk!4v1725614741673!5m2!1szh-CN!2shk" allowfullscreen="" loading="lazy"></iframe>
+                       </div>
+                      </div>
+                  </div>
+               
+            </div>
+         </div>	    
       </div>
-      </div>	    
-      </div>
+                           
       <footer id="footer">
          <div class="container-fluid">
+            <p>&copy; 2024 SLaB Lab. All rights reserved.</p>
          </div>
       </footer>
 
       <!-- Javascript files -->
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <script> $('#main-carousel').carousel(); </script>
    </body>
 </html>
