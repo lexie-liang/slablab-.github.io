@@ -28,6 +28,8 @@
             max-width: 450px; /* Increase max-width to make the images larger */
          }
          .img-container {
+            width: 50%;
+            height: 50%;
             display: flex;
             justify-content: center; /* Center the images in the container */
             align-items: center;
@@ -95,7 +97,7 @@
    </div>
 
 <!-- 外部容器，确保页面内容不会超过指定宽度 -->
-<div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+<div class="img-container" style="max-width: 800px; margin: 0 auto; text-align: center;">
 
    <!-- 轮播图 -->
    <div class="row-fluid justify-content-center">
@@ -176,24 +178,7 @@
    </div>
 </div>
 
-<!-- 添加的 CSS 样式，用于控制外部容器和图片 -->
-<style>
-  .container {
-    width: 50%; /* 可调整容器宽度 */
-    height: 50%;
-    text-align: center; /* 确保容器内容居中 */
-  }
 
-  .carousel-image {
-    display: block; /* 确保图片在容器中居中显示 */
-    max-width: 100%; /* 防止图片超出容器 */
-    height: auto; /* 保持图片的纵横比 */
-  }
-
-  .carousel-control {
-    width: 30px; /* 控制按钮的大小 */
-  }
-</style>
 
 
    <!-- Principal Investigator Section -->
