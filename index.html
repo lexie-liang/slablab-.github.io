@@ -305,17 +305,28 @@
                     contentBlocks.forEach(contentBlock => {
                       const textContent = contentBlock.querySelector('.text-content');
                       const imageContent = contentBlock.querySelector('.image-content');
+                      const largeImage = contentBlock.querySelector('.large-img'); // 获取大图片元素
                       
                       if (isSmallScreen) {
                         contentBlock.style.display = 'block'; // 小屏幕时垂直布局
                         textContent.style.marginBottom = '20px'; // 文字和图片之间增加间距
                         imageContent.style.marginLeft = '0'; // 图片左对齐
                         imageContent.style.textAlign = 'left'; // 图片文本左对齐
+                  
+                        // 将大图片移动到文本内容下方
+                        if (largeImage) {
+                          textContent.appendChild(largeImage); // 将大图片添加到文本内容的末尾
+                        }
                       } else {
                         contentBlock.style.display = 'flex'; // 大屏幕时水平布局
                         textContent.style.marginBottom = '0'; // 移除间距
                         imageContent.style.marginLeft = '-10px'; // 恢复默认间距
                         imageContent.style.textAlign = 'right'; // 图片右对齐
+                  
+                        // 将大图片还原到原来的图片内容块
+                        if (largeImage && imageContent) {
+                          imageContent.appendChild(largeImage); // 将大图片还原到图片内容块中
+                        }
                       }
                     });
                   };
@@ -326,6 +337,7 @@
                   // 监听窗口大小变化
                   window.addEventListener('resize', updateContentLayout);
                   </script>
+
 
 
 
