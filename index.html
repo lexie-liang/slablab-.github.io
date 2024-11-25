@@ -94,80 +94,27 @@
       </style>
    </head>
    <body>
-     <header id="overview">
-       <img alt="" src="files/title2.png" style="display: block; margin: 0 auto;">
-     </header>
-     <div class="container">
-       <div class="masthead">
-         <div class="navbar">
-           <div class="navbar-inner">
-             <div class="container" style="position: relative;">
-               <!-- 汉堡菜单按钮 -->
-               <button class="hamburger-menu" style="display: none; position: absolute; top: 10px; left: 10px; background: none; border: none; font-size: 24px; cursor: pointer;">☰</button>
-               
-               <!-- 导航菜单 -->
-               <ul class="nav" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 15px;">
-                 <li class="active" style="margin: 5px 0;"><a href="#">Home</a></li>
-                 <li style="margin: 5px 0;"><a href="people.html">Members</a></li>
-                 <li style="margin: 5px 0;"><a href="publications.html">Publications</a></li>
-                 <li style="margin: 5px 0;"><a href="facilities.html">Facilities</a></li>
-                 <li style="margin: 5px 0;"><a href="media.html">Collaboration & Outreach</a></li>
-                 <li style="margin: 5px 0;"><a href="files/Exp7_poster_UST.png" target="_blank">Nap Project Poster</a></li>
-               </ul>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   
-     <script>
-       const hamburgerMenu = document.querySelector('.hamburger-menu');
-       const navMenu = document.querySelector('.nav');
-   
-       // 根据屏幕大小动态调整导航栏样式
-       const updateNavStyle = () => {
-         const isSmallScreen = window.innerWidth <= 768; // 判断屏幕宽度是否小于等于768px
-         if (isSmallScreen) {
-           hamburgerMenu.style.display = 'block'; // 显示汉堡菜单按钮
-           hamburgerMenu.style.textAlign = 'left'; // 按钮左对齐
-           navMenu.style.display = 'none'; // 隐藏菜单
-           navMenu.style.flexDirection = 'column'; // 菜单变为纵向布局
-           navMenu.style.backgroundColor = '#fff'; // 背景色
-           navMenu.style.position = 'absolute'; // 绝对定位
-           navMenu.style.top = '50px'; // 设置菜单距离顶部的距离
-           navMenu.style.left = '10px'; // 菜单左对齐
-           navMenu.style.border = '1px solid #ccc'; // 边框
-           navMenu.style.padding = '10px'; // 内间距
-           navMenu.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)'; // 阴影
-           navMenu.style.textAlign = 'left'; // 菜单项左对齐
-           navMenu.style.width = '200px'; // 限制宽度
-         } else {
-           hamburgerMenu.style.display = 'none'; // 隐藏汉堡菜单按钮
-           navMenu.style.display = 'flex'; // 显示菜单
-           navMenu.style.flexDirection = 'row'; // 菜单横向布局
-           navMenu.style.position = 'static'; // 静态定位
-           navMenu.style.backgroundColor = 'transparent'; // 透明背景
-           navMenu.style.border = 'none'; // 无边框
-           navMenu.style.padding = '0'; // 无内间距
-           navMenu.style.boxShadow = 'none'; // 无阴影
-           navMenu.style.textAlign = 'center'; // 默认居中对齐
-           navMenu.style.width = 'auto'; // 默认宽度
-         }
-       };
-   
-       // 初始化样式
-       updateNavStyle();
-   
-       // 监听窗口大小变化
-       window.addEventListener('resize', updateNavStyle);
-   
-       // 添加点击事件切换菜单显示状态
-       hamburgerMenu.addEventListener('click', () => {
-         navMenu.style.display = navMenu.style.display === 'none' ? 'block' : 'none';
-       });
-     </script>
-
-
+      <header id="overview">
+            <img alt="" src="files/title2.png" style="display: block; margin: 0 auto;">
+         </header>
+      <div class="container">
+         
+        
+         <div class="masthead">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="people.html">Members</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="media.html">Collaboration & Outreach</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
             <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <title>Responsive Images</title>
