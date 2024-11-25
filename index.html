@@ -53,7 +53,7 @@
             margin-top: 40px; /* Increase spacing above section headings */
             margin-bottom: 20px; /* Increase spacing below section headings */
             text-align: center; /* Center the heading */
-            line-height: 1.3;
+            line-height: 1.6;
          }
          h3 {
             font-size: 24px;
@@ -101,99 +101,43 @@
       <div class="container">
          
         
-      <div class="masthead">
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <button class="hamburger-button" onclick="toggleMenu()">☰</button>
-              <ul class="nav" id="menu">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="people.html">Members</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="media.html">Collaboration & Outreach</a></li>
-              </ul>
+         <div class="masthead">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="people.html">Members</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="media.html">Collaboration & Outreach</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      
-      <style>
-        /* 默认样式 */
-        .hamburger-button {
-          display: none;
-          font-size: 24px;
-          background: none;
-          border: none;
-          cursor: pointer;
-        }
-      
-        .nav {
-          display: flex;
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-        }
-      
-        .nav li {
-          margin-right: 20px;
-        }
-      
-        .nav a {
-          text-decoration: none;
-          color: #000;
-        }
-      
-        /* 小屏幕样式 */
-        @media (max-width: 768px) {
-          .hamburger-button {
-            display: block;
-            margin-bottom: 10px;
-          }
-      
-          .nav {
-            display: none; /* 初始状态为隐藏 */
-            flex-direction: column;
-            align-items: flex-start; /* 左对齐 */
-          }
-      
-          .nav li {
-            margin: 10px 0;
-          }
-      
-          .nav.active {
-            display: flex; /* 点击按钮后显示 */
-          }
-        }
-      </style>
-      
-      <script>
-        // 切换菜单显示
-        const toggleMenu = () => {
-          const menu = document.getElementById('menu');
-          menu.classList.toggle('active');
-        };
-      
-        // 响应式调整布局
-        const updateNavbarLayout = () => {
-          const isSmallScreen = window.innerWidth <= 768;
-          const menu = document.getElementById('menu');
-      
-          if (!isSmallScreen) {
-            menu.classList.remove('active'); // 在大屏幕时默认显示
-          }
-        };
-      
-        // 初始化布局
-        updateNavbarLayout();
-      
-        // 监听窗口大小变化
-        window.addEventListener('resize', updateNavbarLayout);
-      </script>
-
-
-
-
+            <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Responsive Images</title>
+             <style>
+                 .small-img {
+                     max-width: 80%;
+                     height: auto;
+                     display: block;
+                     margin: 0 auto;
+                 }
+                 
+                 .large-img {
+                     max-width: 80%;
+                     height: auto;
+                     display: block;
+                     margin: 0 auto;
+                     margin-top: 40px;
+                 }
+                .text {
+                     text-align: center;
+                 }
+             </style>
         <div class="row-fluid">
             <div class="span12">
                <div class="img-container">
@@ -295,9 +239,9 @@
                   </style>
                
                   <!-- First Content Block -->
-                  <div class="content-with-image" style="display: flex; align-items: center; gap: -10px;">
+                  <div class="content-with-image" style="display: flex; align-items: center; gap: -10px; flex-wrap: wrap;">
                       <!-- Text Content -->
-                      <div class="text-content" style="flex: 1; text-align: justify;">
+                      <div class="text-content" style="flex: 1; text-align: justify; margin-bottom: 10px;">
                           <h3>Second-language learning of speech prosody</h3>
                           <p>
                               It is well established that the first language (L1) is claimed to be responsible for second-language learners’ (in)ability to process sounds in a new language. However, the conditions under which the L1 facilitates or inhibits the learning of new sounds have yet to be understood. Adopting phonetic and psycholinguistic approaches, our research focuses on how lexical tones (Mandarin tones: /pā/ ‘eight’ T1, /pá/ ‘to pull out’ T2, /pǎ/ ‘to hold’ T3, /pà/ ‘father’ T4) and lexical stress (English stress: DEsert vs. deSERT) are processed by adult second-language learners who speak different languages as L1.
@@ -308,11 +252,13 @@
                           </p>
                       </div>
                       <!-- Image Content -->
-                      <div class="image-content" style="flex: 0 0 auto; margin-left: -10px; text-align: right;">
+                      <div class="image-content" style="flex: 0 0 auto; margin-left: -10px; text-align: right; width: 100%; max-width: 200px;">
                           <img src="files/Theme1.PNG" style="width: 70%; height: auto; max-width: 200px;" alt="Illustration" class="responsive-img theme-img">
                       </div>
                   </div>
-                  
+
+
+               
                   <!-- Second Content Block -->
                   <div class="content-with-image" style="display: flex; align-items: center; gap: -10px; flex-wrap: wrap;">
                       <!-- Text Content -->
@@ -331,14 +277,35 @@
                           <img src="files/Theme2.PNG" style="width: 70%; height: auto; max-width: 200px;" alt="Illustration" class="responsive-img theme-img">
                       </div>
                   </div>
+
+
+                  <!-- Third Content Block -->
+                  <div class="content-with-image" style="display: flex; align-items: center; gap: -10px; flex-wrap: wrap;">
+                      <!-- Text Content -->
+                      <div class="text-content" style="flex: 1; text-align: justify; margin-bottom: 10px;">
+                          <h3>Aging, cognitive, and language learning</h3>
+                          <p>
+                              Our research is concerned with the well-being of the aging population. Older adults are facing the challenges of age-related dysfunction in language learning and cognition (e.g., memory and attention). Indeed, recent projects have aimed at investigating older adults’ decline in lexical tone learning and the possible relationship with cognitive ability. We also attempt to find evidence that multilingual language experiences (including learning a new language) can mitigate cognitive decline and promote healthy aging.
+                          </p>
+                          <p>
+                              Cantonese-speaking Older Adults Wanted —> 
+                              <a href="files/Older adult poster.pdf" target="_blank">FADL Project</a>
+                          </p>
+                   </div>
+                   <!-- Image Content -->
+                   <div class="image-content" style="flex: 0 0 auto; margin-left: -10px; text-align: right; width: 100%; max-width: 200px;">
+                       <img src="files/Theme3.PNG" style="width: 70%; height: auto; max-width: 200px;" alt="Illustration" class="responsive-img theme-img">
+                   </div>
+                  </div>
+               
                   <script>
-                    // JavaScript动态调整样式
-                    const updateContentLayout = () => {
-                      const isSmallScreen = window.innerWidth <= 768; // 判断屏幕宽度是否小于等于768px
-                      const contentBlock = document.querySelector('.content-with-image');
-                      const textContent = document.querySelector('.text-content');
-                      const imageContent = document.querySelector('.image-content');
-                  
+                  const updateContentLayout = () => {
+                    const isSmallScreen = window.innerWidth <= 768; // 判断屏幕宽度是否小于等于768px
+                    const contentBlocks = document.querySelectorAll('.content-with-image');
+                    contentBlocks.forEach(contentBlock => {
+                      const textContent = contentBlock.querySelector('.text-content');
+                      const imageContent = contentBlock.querySelector('.image-content');
+                      
                       if (isSmallScreen) {
                         contentBlock.style.display = 'block'; // 小屏幕时垂直布局
                         textContent.style.marginBottom = '20px'; // 文字和图片之间增加间距
@@ -350,36 +317,15 @@
                         imageContent.style.marginLeft = '-10px'; // 恢复默认间距
                         imageContent.style.textAlign = 'right'; // 图片右对齐
                       }
-                    };
+                    });
+                  };
                   
-                    // 初始化布局
-                    updateContentLayout();
+                  // 初始化布局
+                  updateContentLayout();
                   
-                    // 监听窗口大小变化
-                    window.addEventListener('resize', updateContentLayout);
+                  // 监听窗口大小变化
+                  window.addEventListener('resize', updateContentLayout);
                   </script>
-
-
-
-                  <!-- Third Content Block -->
-                  <div class="content-with-image" style="display: flex; align-items: center; gap: -10px;">
-                      <!-- Text Content -->
-                      <div class="text-content" style="flex: 1; text-align: justify;">
-                          <h3>Aging, cognitive, and language learning</h3>
-                          <p>
-                              Our research is concerned with the well-being of the aging population. Older adults are facing the challenges of age-related dysfunction in language learning and cognition (e.g., memory and attention). Indeed, recent projects have aimed at investigating older adults’ decline in lexical tone learning and the possible relationship with cognitive ability. We also attempt to find evidence that multilingual language experiences (including learning a new language) can mitigate cognitive decline and promote healthy aging.
-                          </p>
-                          <p>
-                              Cantonese-speaking Older Adults Wanted —> 
-                              <a href="files/Older adult poster.pdf" target="_blank">FADL Project</a>
-                          </p>
-                   </div>
-                   <!-- Image Content -->
-                   <div class="image-content" style="flex: 0 0 auto; margin-left: -10px; text-align: right;">
-                       <img src="files/Theme3.PNG" style="width: 70%; height: auto; max-width: 200px;" alt="Illustration" class="responsive-img theme-img">
-                   </div>
-                  </div>
-
 
 
 
@@ -415,31 +361,28 @@
                       }
                   </style>
                
-                  <div class="content-with-image" style="display: flex; align-items: flex-start; gap: 20px;">
-                    <!-- 文本内容 -->
-                    <div class="text-content" style="flex: 1; text-align: justify;">
-                      <h4>Contact us!</h4>
-                      <p style="margin: 0;">
-                        Email: <a href="mailto:qinlabhkust@gmail.com">qinlabhkust@gmail.com</a><br>
-                        Location: Room G005,<br>
-                        Cheng Yu Tung Building,<br>
-                        The Hong Kong University of Science and Technology,<br>
-                        Clear Water Bay, Kowloon, Hong Kong<br>
-                      </p>
-                    </div>
-                  
-                    <!-- 图片内容 -->
-                    <div class="image-content" style="flex: 0 0 auto;">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8513.108081198025!2d114.25819148394467!3d22.33427692497778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404046b3b9889e3%3A0x7f5b59d145fcf27f!2z6YOR6KOV5b2k5qW8!5e0!3m2!1szh-CN!2shk!4v1725614741673!5m2!1szh-CN!2shk"
-                        style="width: 300px; height: 200px; border: none; vertical-align: top;" 
-                        allowfullscreen=""
-                        loading="lazy">
-                      </iframe>
-                    </div>
+                  <div class="content-with-image">
+                      <div class="text-content">
+                           <h4>Contact us!</h4>
+                           <br>
+                              <p>
+                                 ​Email: <a href="mailto:qinlabhkust@gmail.com">qinlabhkust@gmail.com</a><br>
+                                 Location: Room G005,</a><br>
+                                 Cheng Yu Tung Building,</a><br>
+                                 The Hong Kong University of Science and Technology,</a><br>
+                                 Clear Water Bay, Kowloon, Hong Kong</a><br>
+                              </p>
+                      </div>
+                      <div class="image-content">
+                           <iframe style="padding-top: 20px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8513.108081198025!2d114.25819148394467!3d22.33427692497778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404046b3b9889e3%3A0x7f5b59d145fcf27f!2z6YOR6KOV5b2k5qW8!5e0!3m2!1szh-CN!2shk!4v1725614741673!5m2!1szh-CN!2shk" allowfullscreen="" loading="lazy"></iframe>
+                       </div>
+                      </div>
                   </div>
-
-
+                  <hr>
+               
+            </div>
+         </div>	    
+      </div>
                   
       <footer id="footer">
          <div class="container-fluid">
