@@ -233,17 +233,42 @@
 <hr>
 	
 	<div class="row-fluid" style="display: flex; align-items: flex-start; padding-top: 20px; flex-wrap: wrap;">
-	  <div class="image-content" style="flex: 0 0 auto; width: 200px;">
+	  <div class="image-content" style="flex: 0 0 auto; width: 200px; margin-right: 20px;">
 	    <img src="thumbs/Photo_Jiayu.jpg" alt="Jiayu Liang" style="width: 100%; height: auto;" />
 	  </div>   
 	  <div class="text-content" style="flex: 1 1 300px; min-width: 300px;">
-	    <h4 style="text-align: left; margin-top: 0; margin-left: 55px;">Jiayu LIANG 梁家瑜 (BA: Shandong U)</h4>
-	    <p style="font-size: 18px; margin-bottom: 5px; margin-left: 55px;"><b>Research Assistant</b></p>
-	    <p style="font-size: 18px; margin-top: 5px; margin-bottom: 5px; margin-left: 55px;">hmjyliang@ust.hk; <a href="https://www.researchgate.net/profile/Jiayu-Liang-14">ResearchGate</a>, <a href="files/CV_Jiayu LIANG.pdf">CV</a></p>
-	    <p style="font-size: 18px; margin-top: 5px; margin-left: 55px;"><a href="https://lexie-liang.github.io/LiangJiayu.github.io/">Personal Website</a></p>
-	    <p style="text-align: justify; margin-left: 55px;">Jiayu holds a BA in English from Shandong University. Her research interests focus on the production and perception of non-native languages, as well as the cross-domain transfer effects between music and language experience. For her undergraduate thesis, Jiayu employed eye-tracking methodology to investigate how Mandarin speakers' musical aptitude influences their perception and production of English vowels. Currently, she is involved in an eye-tracking study examining L2 learners' perceptual learning and consolidation of English lexical stress.</p>
+	    <h4 style="text-align: left; margin-top: 0; margin-left: 0;">Jiayu LIANG 梁家瑜 (BA: Shandong U)</h4>
+	    <p style="font-size: 18px; margin-bottom: 5px; margin-left: 0;"><b>Research Assistant</b></p>
+	    <p style="font-size: 18px; margin-top: 5px; margin-bottom: 5px; margin-left: 0;">hmjyliang@ust.hk; <a href="https://www.researchgate.net/profile/Jiayu-Liang-14">ResearchGate</a>, <a href="files/CV_Jiayu LIANG.pdf">CV</a></p>
+	    <p style="font-size: 18px; margin-top: 5px; margin-left: 0;"><a href="https://lexie-liang.github.io/LiangJiayu.github.io/">Personal Website</a></p>
+	    <p style="text-align: justify; margin-left: 0;">Jiayu holds a BA in English from Shandong University. Her research interests focus on the production and perception of non-native languages, as well as the cross-domain transfer effects between music and language experience. For her undergraduate thesis, Jiayu employed eye-tracking methodology to investigate how Mandarin speakers' musical aptitude influences their perception and production of English vowels. Currently, she is involved in an eye-tracking study examining L2 learners' perceptual learning and consolidation of English lexical stress.</p>
 	  </div>
 	</div>
+	<script>
+	  // JavaScript媒体查询动态调整
+	  const updateStyles = () => {
+	    const isSmallScreen = window.innerWidth <= 768;
+	    const row = document.querySelector('.row-fluid');
+	    const imageContent = document.querySelector('.image-content');
+	    const textContent = document.querySelector('.text-content');
+	
+	    if (isSmallScreen) {
+	      row.style.display = 'block';
+	      textContent.style.marginLeft = '0';
+	      imageContent.style.marginRight = '0';
+	    } else {
+	      row.style.display = 'flex';
+	      textContent.style.marginLeft = '20px';
+	    }
+	  };
+	
+	  // 初始化样式
+	  updateStyles();
+	
+	  // 监听窗口大小变化
+	  window.addEventListener('resize', updateStyles);
+	</script>
+
 
 </section>
 	
