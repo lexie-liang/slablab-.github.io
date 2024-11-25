@@ -154,10 +154,17 @@
             display: none; /* 初始状态为隐藏 */
             flex-direction: column;
             align-items: flex-start; /* 左对齐 */
+            background-color: #f8f9fa; /* 可选：背景色 */
+            border: 1px solid #ddd; /* 可选：边框 */
+            padding: 10px; /* 可选：内边距 */
+            position: absolute; /* 可选：绝对定位 */
+            top: 50px; /* 与汉堡按钮位置保持一致 */
+            left: 10px; /* 居左 */
+            z-index: 1000; /* 保证显示在顶部 */
           }
       
           .nav li {
-            margin: 10px 0;
+            margin: 10px 0; /* 每个项目间距 */
           }
       
           .nav.active {
@@ -173,7 +180,7 @@
           menu.classList.toggle('active');
         };
       
-        // 响应式调整布局
+        // 初始化布局
         const updateNavbarLayout = () => {
           const isSmallScreen = window.innerWidth <= 768;
           const menu = document.getElementById('menu');
