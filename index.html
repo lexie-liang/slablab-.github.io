@@ -93,7 +93,8 @@
          
       </style>
    </head>
-<body>
+   <body>
+
   <header id="overview">
     <img alt="" src="files/title2.png" style="display: block; margin: 0 auto;">
   </header>
@@ -103,15 +104,16 @@
         <div class="navbar-inner">
           <div class="container" style="position: relative;">
             <!-- 汉堡菜单按钮 -->
-            <button class="hamburger-menu" style="display: none; position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; cursor: pointer;">☰</button>
+            <button class="hamburger-menu" style="display: none; position: absolute; top: 10px; left: 10px; background: none; border: none; font-size: 24px; cursor: pointer;">☰</button>
             
             <!-- 导航菜单 -->
             <ul class="nav" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 15px;">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="people.html">Members</a></li>
-              <li><a href="publications.html">Publications</a></li>
-              <li><a href="facilities.html">Facilities</a></li>
-              <li><a href="media.html">Collaboration & Outreach</a></li>
+              <li class="active" style="margin: 5px 0;"><a href="#">Home</a></li>
+              <li style="margin: 5px 0;"><a href="people.html">Members</a></li>
+              <li style="margin: 5px 0;"><a href="publications.html">Publications</a></li>
+              <li style="margin: 5px 0;"><a href="facilities.html">Facilities</a></li>
+              <li style="margin: 5px 0;"><a href="media.html">Collaboration & Outreach</a></li>
+              <li style="margin: 5px 0;"><a href="files/Exp7_poster_UST.png" target="_blank">Nap Project Poster</a></li>
             </ul>
           </div>
         </div>
@@ -128,15 +130,18 @@
       const isSmallScreen = window.innerWidth <= 768; // 判断屏幕宽度是否小于等于768px
       if (isSmallScreen) {
         hamburgerMenu.style.display = 'block'; // 显示汉堡菜单按钮
+        hamburgerMenu.style.textAlign = 'left'; // 按钮左对齐
         navMenu.style.display = 'none'; // 隐藏菜单
         navMenu.style.flexDirection = 'column'; // 菜单变为纵向布局
-        navMenu.style.backgroundColor = '#fff'; // 背景色（可根据需要调整）
+        navMenu.style.backgroundColor = '#fff'; // 背景色
         navMenu.style.position = 'absolute'; // 绝对定位
-        navMenu.style.top = '50px'; // 设置位置
-        navMenu.style.right = '10px'; // 设置位置
-        navMenu.style.border = '1px solid #ccc'; // 可选边框
+        navMenu.style.top = '50px'; // 设置菜单距离顶部的距离
+        navMenu.style.left = '10px'; // 菜单左对齐
+        navMenu.style.border = '1px solid #ccc'; // 边框
         navMenu.style.padding = '10px'; // 内间距
-        navMenu.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)'; // 阴影效果
+        navMenu.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)'; // 阴影
+        navMenu.style.textAlign = 'left'; // 菜单项左对齐
+        navMenu.style.width = '200px'; // 限制宽度
       } else {
         hamburgerMenu.style.display = 'none'; // 隐藏汉堡菜单按钮
         navMenu.style.display = 'flex'; // 显示菜单
@@ -146,6 +151,8 @@
         navMenu.style.border = 'none'; // 无边框
         navMenu.style.padding = '0'; // 无内间距
         navMenu.style.boxShadow = 'none'; // 无阴影
+        navMenu.style.textAlign = 'center'; // 默认居中对齐
+        navMenu.style.width = 'auto'; // 默认宽度
       }
     };
 
@@ -160,7 +167,7 @@
       navMenu.style.display = navMenu.style.display === 'none' ? 'block' : 'none';
     });
   </script>
-</body>
+
 
             <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -304,9 +311,9 @@
                   </div>
                   
                   <!-- Second Content Block -->
-                  <div class="content-with-image" style="display: flex; align-items: center; gap: -10px; flex-wrap: wrap;">
+                  <div class="content-with-image"  style="display: flex; align-items: center; gap: -10px;">
                       <!-- Text Content -->
-                      <div class="text-content" style="flex: 1; text-align: justify; margin-bottom: 10px;">
+                      <div class="text-content" style="flex: 1; text-align: justify;">
                           <h3>Sleep-dependent consolidation of lexical tones</h3>
                           <p>
                               Recent evidence shows that sleep plays a crucial role in transforming newly acquired linguistic knowledge into long-term memory. Given unique characteristics of lexical tones (e.g., high talker-variability of pitch), there is still a vast unexplored area in sleep-mediated memory consolidation of tone learning. By combining behavioral experiments and brain imaging technologies (e.g., EEG), we are dedicated to exploring the relationship between sleep and tone learning, providing memory-based insights for cross-language and cross-age learning of lexical tones.
@@ -317,38 +324,10 @@
                           </p>
                       </div>
                       <!-- Image Content -->
-                      <div class="image-content" style="flex: 0 0 auto; margin-left: -10px; text-align: right; width: 100%; max-width: 200px;">
+                      <div class="image-content" style="flex: 0 0 auto; margin-left: -10px; text-align: right;">
                           <img src="files/Theme2.PNG" style="width: 70%; height: auto; max-width: 200px;" alt="Illustration" class="responsive-img theme-img">
                       </div>
                   </div>
-                  <script>
-                    // JavaScript动态调整样式
-                    const updateContentLayout = () => {
-                      const isSmallScreen = window.innerWidth <= 768; // 判断屏幕宽度是否小于等于768px
-                      const contentBlock = document.querySelector('.content-with-image');
-                      const textContent = document.querySelector('.text-content');
-                      const imageContent = document.querySelector('.image-content');
-                  
-                      if (isSmallScreen) {
-                        contentBlock.style.display = 'block'; // 小屏幕时垂直布局
-                        textContent.style.marginBottom = '20px'; // 文字和图片之间增加间距
-                        imageContent.style.marginLeft = '0'; // 图片左对齐
-                        imageContent.style.textAlign = 'left'; // 图片文本左对齐
-                      } else {
-                        contentBlock.style.display = 'flex'; // 大屏幕时水平布局
-                        textContent.style.marginBottom = '0'; // 移除间距
-                        imageContent.style.marginLeft = '-10px'; // 恢复默认间距
-                        imageContent.style.textAlign = 'right'; // 图片右对齐
-                      }
-                    };
-                  
-                    // 初始化布局
-                    updateContentLayout();
-                  
-                    // 监听窗口大小变化
-                    window.addEventListener('resize', updateContentLayout);
-                  </script>
-
 
 
                   <!-- Third Content Block -->
