@@ -120,7 +120,7 @@
       </div>
       
       <style>
-        /* 默认样式 */
+        /* 默认样式：电脑显示横向菜单 */
         .hamburger-button {
           display: none; /* 默认隐藏汉堡按钮 */
           font-size: 24px;
@@ -130,7 +130,7 @@
         }
       
         .nav {
-          display: flex;
+          display: flex; /* 横向排列 */
           list-style-type: none;
           padding: 0;
           margin: 0;
@@ -154,13 +154,13 @@
       
           .nav {
             display: none; /* 小屏幕默认隐藏横向菜单 */
-            flex-direction: column; /* 竖向排列 */
+            flex-direction: column; /* 设置竖向排列 */
             align-items: flex-start; /* 左对齐 */
             background-color: #f8f9fa; /* 背景色 */
             border: 1px solid #ddd; /* 边框 */
             padding: 10px; /* 内边距 */
             position: absolute; /* 绝对定位 */
-            top: 50px; /* 菜单与按钮对齐 */
+            top: 50px; /* 菜单位置 */
             left: 10px;
             z-index: 1000; /* 确保菜单在顶部 */
           }
@@ -190,9 +190,9 @@
           if (!isSmallScreen) {
             // 大屏幕恢复横向菜单显示
             menu.classList.remove('active');
-            menu.style.display = 'flex'; // 横向排列
+            menu.style.display = 'flex'; // 恢复横向排列
           } else {
-            // 小屏幕隐藏菜单
+            // 小屏幕隐藏横向菜单
             menu.style.display = 'none';
           }
         };
@@ -203,6 +203,7 @@
         // 监听窗口大小变化
         window.addEventListener('resize', updateNavbarLayout);
       </script>
+
 
 
         <div class="row-fluid">
