@@ -122,7 +122,7 @@
       <style>
         /* 默认样式 */
         .hamburger-button {
-          display: none; /* 大屏幕隐藏汉堡按钮 */
+          display: none; /* 默认隐藏汉堡按钮 */
           font-size: 24px;
           background: none;
           border: none;
@@ -153,24 +153,24 @@
           }
       
           .nav {
-            display: none; /* 隐藏横向菜单 */
-            flex-direction: column; /* 设置竖向排列 */
+            display: none; /* 小屏幕默认隐藏横向菜单 */
+            flex-direction: column; /* 竖向排列 */
             align-items: flex-start; /* 左对齐 */
             background-color: #f8f9fa; /* 背景色 */
             border: 1px solid #ddd; /* 边框 */
             padding: 10px; /* 内边距 */
             position: absolute; /* 绝对定位 */
-            top: 50px; /* 菜单位置 */
+            top: 50px; /* 菜单与按钮对齐 */
             left: 10px;
-            z-index: 1000; /* 确保菜单在最上层 */
-          }
-      
-          .nav li {
-            margin: 10px 0; /* 每个菜单项之间的间距 */
+            z-index: 1000; /* 确保菜单在顶部 */
           }
       
           .nav.active {
             display: flex; /* 点击按钮后显示菜单 */
+          }
+      
+          .nav li {
+            margin: 10px 0; /* 每个菜单项间距 */
           }
         }
       </style>
@@ -188,10 +188,12 @@
           const menu = document.getElementById('menu');
       
           if (!isSmallScreen) {
-            menu.classList.remove('active'); // 在大屏幕时隐藏竖向菜单
-            menu.style.display = 'flex'; // 大屏幕显示横向菜单
+            // 大屏幕恢复横向菜单显示
+            menu.classList.remove('active');
+            menu.style.display = 'flex'; // 横向排列
           } else {
-            menu.style.display = 'none'; // 小屏幕初始隐藏竖向菜单
+            // 小屏幕隐藏菜单
+            menu.style.display = 'none';
           }
         };
       
@@ -201,6 +203,7 @@
         // 监听窗口大小变化
         window.addEventListener('resize', updateNavbarLayout);
       </script>
+
 
         <div class="row-fluid">
             <div class="span12">
