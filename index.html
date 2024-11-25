@@ -104,7 +104,9 @@
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
+              <!-- 汉堡按钮 -->
               <button class="hamburger-button" onclick="toggleMenu()">☰</button>
+              <!-- 菜单 -->
               <ul class="nav" id="menu">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="people.html">Members</a></li>
@@ -120,7 +122,7 @@
       <style>
         /* 默认样式 */
         .hamburger-button {
-          display: none;
+          display: none; /* 大屏幕隐藏汉堡按钮 */
           font-size: 24px;
           background: none;
           border: none;
@@ -146,29 +148,29 @@
         /* 小屏幕样式 */
         @media (max-width: 768px) {
           .hamburger-button {
-            display: block;
+            display: block; /* 小屏幕显示汉堡按钮 */
             margin-bottom: 10px;
           }
       
           .nav {
-            display: none; /* 初始状态为隐藏 */
-            flex-direction: column;
+            display: none; /* 隐藏横向菜单 */
+            flex-direction: column; /* 设置竖向排列 */
             align-items: flex-start; /* 左对齐 */
-            background-color: #f8f9fa; /* 可选：背景色 */
-            border: 1px solid #ddd; /* 可选：边框 */
-            padding: 10px; /* 可选：内边距 */
-            position: absolute; /* 可选：绝对定位 */
-            top: 50px; /* 与汉堡按钮位置保持一致 */
-            left: 10px; /* 居左 */
-            z-index: 1000; /* 保证显示在顶部 */
+            background-color: #f8f9fa; /* 背景色 */
+            border: 1px solid #ddd; /* 边框 */
+            padding: 10px; /* 内边距 */
+            position: absolute; /* 绝对定位 */
+            top: 50px; /* 菜单位置 */
+            left: 10px;
+            z-index: 1000; /* 确保菜单在最上层 */
           }
       
           .nav li {
-            margin: 10px 0; /* 每个项目间距 */
+            margin: 10px 0; /* 每个菜单项之间的间距 */
           }
       
           .nav.active {
-            display: flex; /* 点击按钮后显示 */
+            display: flex; /* 点击按钮后显示菜单 */
           }
         }
       </style>
@@ -186,7 +188,10 @@
           const menu = document.getElementById('menu');
       
           if (!isSmallScreen) {
-            menu.classList.remove('active'); // 在大屏幕时默认显示
+            menu.classList.remove('active'); // 在大屏幕时隐藏竖向菜单
+            menu.style.display = 'flex'; // 大屏幕显示横向菜单
+          } else {
+            menu.style.display = 'none'; // 小屏幕初始隐藏竖向菜单
           }
         };
       
@@ -197,28 +202,6 @@
         window.addEventListener('resize', updateNavbarLayout);
       </script>
 
-            <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>Responsive Images</title>
-             <style>
-                 .small-img {
-                     max-width: 80%;
-                     height: auto;
-                     display: block;
-                     margin: 0 auto;
-                 }
-                 
-                 .large-img {
-                     max-width: 80%;
-                     height: auto;
-                     display: block;
-                     margin: 0 auto;
-                     margin-top: 40px;
-                 }
-                .text {
-                     text-align: center;
-                 }
-             </style>
         <div class="row-fluid">
             <div class="span12">
                <div class="img-container">
