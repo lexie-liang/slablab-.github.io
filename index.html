@@ -104,17 +104,17 @@
       <div class="masthead">
         <div class="navbar">
           <div class="navbar-inner">
-            <div class="container">
+             <div class="container">
               <button class="hamburger-button" onclick="toggleMenu()">☰</button>
               <ul class="nav" id="menu">
-                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="people.html">Members</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="facilities.html">Facilities</a></li>
                 <li><a href="media.html">Collaboration & Outreach</a></li>
               </ul>
             </div>
-          </div>
+         </div> 
         </div>
       </div>
       
@@ -122,10 +122,7 @@
         /* 默认样式 */
         .hamburger-button {
           display: none;
-          font-size: 24px;
-          background: none;
-          border: none;
-          cursor: pointer;
+          
         }
       
         .nav {
@@ -149,21 +146,28 @@
           .hamburger-button {
             display: block;
             margin-bottom: 10px;
+             font-size: 24px;
+             background: none;
+             border: none;
+             cursor: pointer;
           }
       
-          .nav {
+          #menu {
             display: none; /* 初始状态为隐藏 */
-            flex-direction: column;
+             flex-direction: column;
             align-items: flex-start; /* 左对齐 */
           }
       
           .nav li {
             margin: 10px 0;
           }
+         
       
-          .nav.active {
+/*           .active {
             display: flex; /* 点击按钮后显示 */
-          }
+            flex-direction: column;
+            align-items: flex-start; /* 左对齐 */
+          } */
         }
       </style>
       
@@ -171,17 +175,20 @@
         // 切换菜单显示
         const toggleMenu = () => {
           const menu = document.getElementById('menu');
-          menu.classList.toggle('active');
+          // menu.classList.toggle('active');
+            if (menu.style.display == 'flex'){
+                 menu.style.display = 'none'
+              }
+              else
+                 menu.style.display = 'flex'
+   
         };
       
         // 响应式调整布局
         const updateNavbarLayout = () => {
           const isSmallScreen = window.innerWidth <= 768;
           const menu = document.getElementById('menu');
-      
-          if (!isSmallScreen) {
-            menu.classList.remove('active'); // 在大屏幕时默认显示
-          }
+             
         };
       
         // 初始化布局
@@ -190,7 +197,6 @@
         // 监听窗口大小变化
         window.addEventListener('resize', updateNavbarLayout);
       </script>
-
             <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <title>Responsive Images</title>
