@@ -234,10 +234,28 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- Image Content -->
-                            <div class="image-content" style="flex: 2;">
-                                <img src="files/Photo_Homepage.jpg" class="large-img" alt="Photo Homepage">
-                            </div>
+                           <!-- Carousel Container -->
+                           <div class="image-content" style="flex: 2; overflow: hidden; white-space: nowrap;">
+                               <div class="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+                                   <img src="files/Photo_Homepage.jpg" class="large-img" alt="Photo Homepage">
+                                   <img src="files/Photo_2.jpg" class="large-img" alt="Second Image">
+                                   <img src="files/Photo_3.jpg" class="large-img" alt="Third Image">
+                               </div>
+                           </div>
+                           
+                           <!-- Simple JS for Auto-Sliding -->
+                           <script>
+                               const carousel = document.querySelector('.carousel');
+                               let index = 0;
+                           
+                               function slide() {
+                                   index = (index + 1) % 3;  // Adjust for the number of images
+                                   carousel.style.transform = `translateX(${-index * 100}%)`;
+                               }
+                           
+                               setInterval(slide, 3000);  // Auto-slide every 3 seconds
+                           </script>
+
                         </div>
                     </div>
                 </div>
@@ -245,6 +263,9 @@
       </body>
 </html>
 <hr>
+
+                           
+
              <div class="section">
                   <h4>News and Events</h4>
                   <br>
